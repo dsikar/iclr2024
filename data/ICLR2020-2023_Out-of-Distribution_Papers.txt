@@ -1,0 +1,37 @@
+## ICLR 2020 (2)
+Learning to Balance: Bayesian Meta-Learning for Imbalanced and Out-of-distribution Tasks
+Input Complexity and Out-of-distribution Detection with Likelihood-based Generative Models
+
+## ICLR 2021 (4)
+Repurposing Pretrained Models for Robust Out-of-domain Few-Shot Learning
+Multiscale Score Matching for Out-of-Distribution Detection
+In-N-Out: Pre-Training and Self-Training using Auxiliary Information for Out-of-Distribution Robustness
+Removing Undesirable Feature Contributions Using Out-of-Distribution Data
+
+## ICLR 2022 (7)
+Uncertainty Modeling for Out-of-Distribution Generalization
+Fine-Tuning can Distort Pretrained Features and Underperform Out-of-Distribution
+Igeood: An Information Geometry Approach to Out-of-Distribution Detection
+PI3NN: Out-of-distribution-aware Prediction Intervals from Three Neural Networks
+Invariant Causal Representation Learning for Out-of-Distribution Generalization
+Revisiting flow generative models for Out-of-distribution detection
+Out-of-distribution Generalization in the Presence of Nuisance-Induced Spurious Correlations
+
+## ICLR 2023 (16)
+
+Out-of-Distribution Detection based on In-Distribution Data Patterns Memorization with Modern Hopfield Energy
+Topology-aware Robust Optimization for Out-of-Distribution Generalization
+Turning the Curse of Heterogeneity in Federated Learning into a Blessing for Out-of-Distribution Detection
+Can Agents Run Relay Race with Strangers? Generalization of RL to Out-of-Distribution Trajectories
+Energy-based Out-of-Distribution Detection for Graph Neural Networks
+How to Exploit Hyperspherical Embeddings for Out-of-Distribution Detection?
+Out-of-distribution Representation Learning for Time Series Classification
+Improving Out-of-distribution Generalization with Indirection Representations
+Out-of-distribution Detection with Implicit Outlier Transformation
+Modeling the Data-Generating Process is Necessary for Out-of-Distribution Generalization
+Extremely Simple Activation Shaping for Out-of-Distribution Detection
+The Tilted Variational Autoencoder: Improving Out-of-Distribution Detection
+On the Effectiveness of Out-of-Distribution Data in Self-Supervised Long-Tail Learning.
+Diversify and Disambiguate: Out-of-Distribution Robustness via Disagreement
+Pareto Invariant Risk Minimization: Towards Mitigating the Optimization Dilemma in Out-of-Distribution Generalization
+Out-of-Distribution Detection and Selective Generation for Conditional Language Models

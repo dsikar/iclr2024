@@ -1,0 +1,230 @@
+## ICLR 2020 (2)
+Learning to Balance: Bayesian Meta-Learning for Imbalanced and Out-of-distribution Tasks
+Input Complexity and Out-of-distribution Detection with Likelihood-based Generative Models
+
+## ICLR 2021 (4)
+Repurposing Pretrained Models for Robust Out-of-domain Few-Shot Learning
+Multiscale Score Matching for Out-of-Distribution Detection
+In-N-Out: Pre-Training and Self-Training using Auxiliary Information for Out-of-Distribution Robustness
+Removing Undesirable Feature Contributions Using Out-of-Distribution Data
+
+## ICLR 2022 (7)
+Uncertainty Modeling for Out-of-Distribution Generalization
+Fine-Tuning can Distort Pretrained Features and Underperform Out-of-Distribution
+Igeood: An Information Geometry Approach to Out-of-Distribution Detection
+PI3NN: Out-of-distribution-aware Prediction Intervals from Three Neural Networks
+Invariant Causal Representation Learning for Out-of-Distribution Generalization
+Revisiting flow generative models for Out-of-distribution detection
+Out-of-distribution Generalization in the Presence of Nuisance-Induced Spurious Correlations
+
+## ICLR 2023 (16)
+
+Out-of-Distribution Detection based on In-Distribution Data Patterns Memorization with Modern Hopfield Energy
+Topology-aware Robust Optimization for Out-of-Distribution Generalization
+Turning the Curse of Heterogeneity in Federated Learning into a Blessing for Out-of-Distribution Detection
+Can Agents Run Relay Race with Strangers? Generalization of RL to Out-of-Distribution Trajectories
+Energy-based Out-of-Distribution Detection for Graph Neural Networks
+How to Exploit Hyperspherical Embeddings for Out-of-Distribution Detection?
+Out-of-distribution Representation Learning for Time Series Classification
+Improving Out-of-distribution Generalization with Indirection Representations
+Out-of-distribution Detection with Implicit Outlier Transformation
+Modeling the Data-Generating Process is Necessary for Out-of-Distribution Generalization
+Extremely Simple Activation Shaping for Out-of-Distribution Detection
+The Tilted Variational Autoencoder: Improving Out-of-Distribution Detection
+On the Effectiveness of Out-of-Distribution Data in Self-Supervised Long-Tail Learning.
+Diversify and Disambiguate: Out-of-Distribution Robustness via Disagreement
+Pareto Invariant Risk Minimization: Towards Mitigating the Optimization Dilemma in Out-of-Distribution Generalization
+Out-of-Distribution Detection and Selective Generation for Conditional Language Models
+
+## ICLR 2020 (36)
+
+Towards Verified Robustness under Text Deletion Interventions
+Understanding and Robustifying Differentiable Architecture Search
+Learning Robust Representations via Multi-View Information Bottleneck
+Training individually fair ML models with sensitive subspace robustness
+AugMix: A Simple Data Processing Method to Improve Robustness and Uncertainty
+Rethinking Softmax Cross-Entropy Loss for Adversarial Robustness
+Robust Reinforcement Learning for Continuous Control with Model Misspecification
+Robust training with ensemble consensus
+Improved Sample Complexities for Deep Neural Networks and Robust Classification via an All-Layer Margin
+Robust Subspace Recovery Layer for Unsupervised Anomaly Detection
+Doubly Robust Bias Reduction in Infinite Horizon Off-Policy Estimation
+Bridging Mode Connectivity in Loss Landscapes and Adversarial Robustness
+Robustness Verification for Transformers
+Robust anomaly detection and backdoor attack detection via differential privacy
+Toward Evaluating Robustness of Deep Reinforcement Learning with Continuous Control
+Breaking  Certified  Defenses:  Semantic  Adversarial  Examples  With  Spoofed  Robustness  Certificates
+Biologically inspired sleep algorithm for increased generalization and adversarial robustness in deep neural networks
+Curriculum Loss: Robust Learning and Generalization  against Label Corruption
+Towards Stable and Efficient Training of Verifiably Robust Neural Networks
+Provable robustness against all adversarial $l_p$-perturbations for $p\geq 1$
+MACER: Attack-free and Scalable Robust Training via Maximizing Certified Radius
+EMPIR: Ensembles of Mixed Precision Deep Networks for Increased Robustness Against Adversarial Attacks
+Improving Adversarial Robustness Requires Revisiting Misclassified Examples
+Jacobian Adversarially Regularized Networks for Robustness
+Adversarially robust transfer learning
+Adversarially Robust Representations with Smooth Encoders
+On Robustness of Neural Ordinary Differential Equations
+Robust Local Features for Improving the Generalization of Adversarial Training
+Gradient $\ell_1$ Regularization for Quantization Robustness
+Robust And Interpretable Blind Image Denoising Via Bias-Free Convolutional Neural Networks
+A Framework  for Robustness Certification  of Smoothed Classifiers Using  F-Divergences
+Scalable and Order-robust Continual Learning with Additive Parameter Decomposition
+Certified Robustness for Top-k Predictions against Adversarial Perturbations via Randomized Smoothing
+Triple Wins: Boosting Accuracy, Robustness and Efficiency Together by Enabling Input-Adaptive Inference
+Understanding l4-based Dictionary Learning: Interpretation, Stability, and Robustness
+Distributionally Robust Neural Networks
+
+## ICLR 2021 (37)
+
+ARMOURED: Adversarially Robust MOdels using Unlabeled data by REgularizing Diversity
+Certify or Predict: Boosting Certified Robustness with Compositional Architectures
+Robust Learning of Fixed-Structure Bayesian Networks in Nearly-Linear Time
+Fast Geometric Projections for Local Robustness Certification
+Provably robust classification of adversarial examples with detection
+Repurposing Pretrained Models for Robust Out-of-domain Few-Shot Learning
+Does enhanced shape bias improve neural network robustness to common corruptions?
+Modeling the Second Player in Distributionally Robust Optimization
+A Hypergradient Approach to Robust Regression without Correspondence
+Robust early-learning: Hindering the memorization of noisy labels
+Drop-Bottleneck: Learning Discrete Compressed Representation for Noise-Robust Exploration
+Evaluations and Methods for Explanation through Robustness Analysis
+NeMo: Neural Mesh Models of Contrastive Features for Robust 3D Pose Estimation
+Training independent subnetworks for robust prediction
+Robust Overfitting may be mitigated by properly learned smoothening
+Self-supervised Adversarial Robustness for the Low-label, High-data Regime
+Robust Curriculum Learning: from clean label detection to noisy label self-correction
+Towards Robust Neural Networks via Close-loop Control
+In-N-Out: Pre-Training and Self-Training using Auxiliary Information for Out-of-Distribution Robustness
+Towards Robustness Against Natural Language Word Substitutions
+On Fast Adversarial Robustness Adaptation in Model-Agnostic Meta-Learning
+Robust Pruning at Initialization
+Enforcing robust control guarantees within neural network policies
+Domain-Robust Visual Imitation Learning with Mutual Information Constraints
+Perceptual Adversarial Robustness: Defense Against Unseen Threat Models
+Improving Adversarial Robustness via Channel-wise Activation Suppressing
+When Optimizing  $f$-Divergence is Robust with Label Noise
+How Does Mixup Help With Robustness and Generalization?
+Collective Robustness Certificates: Exploiting Interdependence in Graph Neural Networks
+DARTS-: Robustly Stepping out of Performance Collapse Without Indicators
+Robust Reinforcement Learning on State Observations with Learned Optimal Adversary
+Improving VAEs' Robustness to Adversarial Attack
+Learning perturbation sets for robust machine learning
+Coping with Label Shift via Distributionally Robust Optimisation
+Learning Robust State Abstractions for Hidden-Parameter Block MDPs
+Robust and Generalizable Visual Representation Learning via Random Convolutions
+InfoBERT: Improving Robustness of Language Models from An Information Theoretic Perspective
+
+## ICLR2022 (40)
+
+Distributionally Robust Fair Principal Components via Geodesic Descents
+Generalization of Neural Combinatorial Solvers Through the Lens of Adversarial Robustness
+Towards Evaluating the Robustness of Neural Networks Learned by Transduction
+Improved deterministic l2 robustness on CIFAR-10 and CIFAR-100
+P-Adapters: Robustly Extracting Factual Information from Language Models with Diverse Prompts
+COPA: Certifying Robust Policies for Offline Reinforcement Learning against Poisoning Attacks
+Learning Distributionally Robust Models at Scale via Composite Optimization
+Adversarially Robust Conformal Prediction
+Audio Lottery: Speech Recognition Made Ultra-Lightweight, Noise-Robust, and Transferable
+The MultiBERTs: BERT Reproductions for Robustness Analysis
+Focus on the Common Good: Group Distributional Robustness Follows
+Understanding Intrinsic Robustness Using Label Uncertainty
+Provably Robust Adversarial Examples
+Sparsity Winning Twice: Better Robust Generalization from More Efficient Training
+Robust Unlearnable Examples: Protecting Data Privacy Against Adversarial Learning
+On Robust Prefix-Tuning for Text Classification
+CROP: Certifying Robust Policies for Reinforcement Learning through Functional Smoothing
+Boosting the Certified Robustness of L-infinity Distance Nets
+Self-ensemble Adversarial Training for Improved Robustness
+Adversarial Robustness Through the Lens of Causality
+Distributionally Robust Models with Parametric Likelihood Ratios
+Discrete Representations Strengthen Vision Transformer Robustness
+Almost Tight L0-norm Certified Robustness of Top-k Predictions against Adversarial Perturbations
+On the Certified Robustness for Ensemble Models and Beyond
+Implicit Bias of Projected Subgradient Method Gives Provable Robust Recovery of Subspaces of Unknown Codimension
+Reducing Excessive Margin to Achieve a Better Accuracy vs. Robustness Trade-off
+Robust Learning Meets Generative Models: Can Proxy Distributions Improve Adversarial Robustness?
+How to Robustify Black-Box ML Models? A Zeroth-Order Optimization Perspective
+Byzantine-Robust Learning on Heterogeneous Datasets via Bucketing
+Maximum Entropy RL (Provably) Solves Some Robust RL Problems
+Robust and Scalable SDE Learning: A Functional Perspective
+Finding Biological Plausibility for Adversarially Robust Features via Metameric Tasks
+Towards Understanding the Robustness Against Evasion Attack on Categorical Data
+Patch-Fool: Are Vision Transformers Always Robust Against Adversarial Perturbations?
+Self-supervised Learning is More Robust to Dataset Imbalance
+Certified Robustness for Deep Equilibrium Models via Interval Bound Propagation
+A Unified Wasserstein Distributional Robustness Framework for Adversarial Training
+DeSKO: Stability-Assured Robust Control with a Deep Stochastic Koopman Operator
+Policy Smoothing for Provably Robust Reinforcement Learning
+On the Convergence of Certified Robust Training with Interval Bound Propagation
+
+## ICLR 2023 (68)
+
+DensePure: Understanding Diffusion Models for Adversarial Robustness
+Noise-Robust De-Duplication at Scale
+Probabilistically Robust Recourse: Navigating the Trade-offs between Costs and Robustness in Algorithmic Recourse
+Adaptive Robust Evidential Optimization For Open Set Detection from Imbalanced Data
+On Explaining Neural Network Robustness with Activation Path
+Re-weighting Based Group Fairness Regularization via Classwise Robust Optimization
+Squeeze Training for Adversarial Robustness
+Brain-like representational straightening of natural movies in robust feedforward neural networks
+TextGrad: Advancing Robustness Evaluation in NLP by Gradient-Driven Optimization
+Certifiably Robust Policy Learning against Adversarial Multi-Agent Communication
+Towards Robustness Certification Against Universal Perturbations
+Holistic Adversarially Robust Pruning
+RGI: robust GAN-inversion for mask-free image inpainting and unsupervised pixel-wise anomaly detection
+Part-Based Models Improve Adversarial Robustness
+On the Perils of Cascading Robust Classifiers
+AGRO: Adversarial discovery of error-prone Groups for Robust Optimization
+Topology-aware Robust Optimization for Out-of-Distribution Generalization
+Dr.Spider: A Diagnostic Evaluation Benchmark towards Text-to-SQL Robustness
+Min-Max Multi-objective Bilevel Optimization with Applications in Robust Machine Learning
+Noise Injection Node Regularization for Robust Learning
+Robust Algorithms on Adaptive Inputs from Bounded Adversaries
+Robust Explanation Constraints for Neural Networks
+Revocable Deep Reinforcement Learning with Affinity Regularization for Outlier-Robust Graph Matching
+Denoising Masked Autoencoders Help Robust Classification
+Robust and Controllable Object-Centric Learning through Energy-based Models
+How robust is unsupervised representation learning to distribution shift?
+RoPAWS: Robust Semi-supervised Representation Learning from Uncurated Data
+Aligning Model and Macaque Inferior Temporal Cortex Representations Improves Model-to-Human Behavioral Alignment and Adversarial Robustness
+ROCO: A General Framework for Evaluating Robustness of Combinatorial Optimization Solvers on Graphs
+Last Layer Re-Training is Sufficient for Robustness to Spurious Correlations
+Localized Randomized Smoothing for Collective Robustness Certification
+Distributionally Robust Post-hoc Classifiers under Prior Shifts
+Robust Fair Clustering: A Novel Fairness Attack and Defense Framework
+Can CNNs Be More Robust Than Transformers?
+Pushing the Accuracy-Group Robustness Frontier with Introspective Self-play
+On the Robustness of Safe Reinforcement Learning under Observational Perturbations
+Hebbian and Gradient-based Plasticity Enables Robust Memory and Rapid Learning in RNNs
+Revisiting Robustness in Graph Machine Learning
+Combating Exacerbated Heterogeneity for Robust Models in Federated Learning
+Bitrate-Constrained DRO: Beyond Worst Case Robustness To Unknown Group Shifts
+Neural Architecture Design and Robustness: A Dataset
+(Certified!!) Adversarial Robustness for Free!
+Robust Active Distillation
+Discovering Informative and Robust Positives for Video Domain Adaptation
+Robustness to corruption in pre-trained Bayesian neural networks
+Chasing All-Round Graph Representation Robustness: Model, Training, and Optimization
+Extracting Robust Models with Uncertain Examples
+TDR-CL: Targeted Doubly Robust Collaborative Learning for Debiased Recommendations
+Towards Robust Object Detection Invariant to Real-World Domain Shifts
+StableDR: Stabilized Doubly Robust Learning for Recommendation on Data Missing Not at Random
+ArCL: Enhancing Contrastive Learning with Augmentation-Robust Representations
+Near-optimal Coresets for Robust Clustering
+Why adversarial training can hurt robust accuracy
+Robust Scheduling with GFlowNets
+Test-Time Robust Personalization for Federated Learning
+Understanding The Robustness of Self-supervised Learning Through Topic Modeling
+Efficient Certified Training and Robustness Verification of Neural ODEs
+Distributionally Robust Recourse Action
+Diversify and Disambiguate: Out-of-Distribution Robustness via Disagreement
+Robust Multivariate Time-Series Forecasting: Adversarial Attacks and Defense Mechanisms
+Temporal Coherent Test Time Optimization for Robust Video Classification
+Provable Robustness against Wasserstein Distribution Shifts via Input Randomization
+Exploring and Exploiting Decision Boundary Dynamics for Adversarial Robustness
+Understanding Zero-shot Adversarial Robustness for Large-Scale Models
+Fundamental limits on the robustness of image classifiers
+On the Robustness to Misspecification of α-posteriors and Their Variational Approximations
+Robust Graph Dictionary Learning
+Learning MLPs on Graphs: A Unified View of Effectiveness, Robustness, and Efficiency
