@@ -1,5 +1,6 @@
 import os
 from semantic_scholar import SemanticScholar
+import datetime
 
 def process_paper_title(ss, title):
     """Fetch and store all data related to the given paper title."""
@@ -9,12 +10,21 @@ def process_paper_title(ss, title):
         return
 
     bibtex, arxiv_id, publication_year, abstract = ss.get_paper_details(paperID)
+
     references = ss.fetch_and_store_references(paperID)
-    ss.add_to_papers_list(paperID, references)
+    ss.add_to_papers_list(paperID, abstract, bibtex, references)
+
+    # Also add the paper to the master_list
+    ss.add_to_master_list(title, paperID, arxiv_id, publication_year, abstract)
 
     # Create a directory named based on the publication year and download the ArXiv PDF
-    directory_name = "iclr_" + publication_year
-    ss.download_arxiv_pdf(arxiv_id, directory_name)
+    directory_name = "iclr_no_year"
+    if publication_year is not None:
+        directory_name = "iclr_" + publication_year
+    else:
+        directory_name = "iclr_no_year"
+    if arxiv_id is not None:
+        ss.download_arxiv_pdf(arxiv_id, directory_name)
 
 def main():
     # Initialize the SemanticScholar class with debug mode turned on
@@ -24,21 +34,37 @@ def main():
     script_dir = os.path.dirname(os.path.realpath(__file__))
     
     # Build the path to the data file
-    file_path = os.path.join(script_dir, '..', 'data', 'ICLR2020-2023_3_Papers.txt')
+    file_path = os.path.join(script_dir, '..', 'data', 'ICLR2020-2023_All_OOD_Robustness_Papers.txt')
     
     # Open the file for reading
     with open(file_path, "r") as file:
+        # Initialize a counter
+        counter = 0
+        
+
         # Iterate through each line in the file
         for line in file:
             # Strip leading and trailing whitespace (including newline characters)
             stripped_line = line.strip()
-            
+
             # Check if the line is not blank and doesn't start with '#'
             if stripped_line and not stripped_line.startswith("#"):
+
+                # Process the paper title with the counter
                 process_paper_title(ss, stripped_line)
 
-    # Save the data to a pickle file after processing all titles
-    ss.store_data_as_pickle("semantic_data.pkl", "./saved_data")
+                # Increment the counter
+                counter += 1
+
+                # Print the current time and counter
+                now = datetime.datetime.now()
+                print(f"***** [{now}] Processing paper {counter} *****")
+
+    # Save the data to a pickle file with a date, time, and counter suffix
+    now = datetime.datetime.now()
+    suffix = now.strftime("%Y-%m-%d_%H-%M-%S")
+    filename = f"semantic_data_{suffix}_{counter}_files.pkl"
+    ss.store_data_as_pickle(filename, "./saved_data")
 
 if __name__ == "__main__":
     main()

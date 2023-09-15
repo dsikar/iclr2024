@@ -96,10 +96,15 @@ class SemanticScholar:
 
         # Extract the desired fields
         bibtex = output[0]['citationStyles']['bibtex']
-        arxiv_id = output[0]['externalIds']['ArXiv']
-        publication_year = output[0]['publicationDate'].split('-')[0]  # Extract the year from the date
+        if 'externalIds' in output[0] and 'ArXiv' in output[0]['externalIds']:
+            arxiv_id = output[0]['externalIds']['ArXiv']
+        else:
+            arxiv_id = None
+        if 'publicationDate' in output[0] and output[0]['publicationDate'] is not None:
+            publication_year = output[0]['publicationDate'].split('-')[0]  # Extract the year from the date
+        else:
+            publication_year = None
         abstract = output[0]['abstract']
-
         return bibtex, arxiv_id, publication_year, abstract
 
 
@@ -121,13 +126,15 @@ class SemanticScholar:
                 print(f"Entry for paperID '{paperID}' already exists in master list.")
 
 
-    def add_to_papers_list(self, paperID, reference_ids):
+    def add_to_papers_list(self, paperID, abstract, bibtex, references):
         """Add a paper and its references to the papers_list."""
         # Check if the entry with the given paperID already exists in papers_list
         if not any(paper['paperID'] == paperID for paper in self.papers_list):
             self.papers_list.append({
                 "paperID": paperID,
-                "references": reference_ids
+                "abstract": abstract,
+                "bibtex": bibtex,
+                "references": references
             })
             if self.debug:            
                 print(f"Entry for paperID '{paperID}' added to papers list.")
