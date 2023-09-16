@@ -1,0 +1,33 @@
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|l|}
+\hline
+Index & Paper Index & Title \\
+\hline
+1 & 3314 & Almost Tight L0-norm Certified Robustness of Top-k Predictio... \\
+2 & 2866 & Boosting the Certified Robustness of L-infinity Distance Net... \\
+3 & 1523 & Breaking  Certified  Defenses:  Semantic  Adversarial  Examp... \\
+4 & 1815 & Certified Robustness for Top-k Predictions against Adversari... \\
+5 & 3272 & Distributionally Robust Models with Parametric Likelihood Ra... \\
+6 & 770 & Extremely Simple Activation Shaping for Out-of-Distribution ... \\
+7 & 612 & How to Exploit Hyperspherical Embeddings for Out-of-Distribu... \\
+8 & 356 & Igeood: An Information Geometry Approach to Out-of-Distribut... \\
+9 & 2879 & Improved deterministic l2 robustness on CIFAR-10 and CIFAR-1... \\
+10 & 1644 & Improving Adversarial Robustness Requires Revisiting Misclas... \\
+11 & 2523 & Improving Adversarial Robustness via Channel-wise Activation... \\
+12 & 1611 & MACER: Attack-free and Scalable Robust Training via Maximizi... \\
+13 & 2035 & Modeling the Second Player in Distributionally Robust Optimi... \\
+14 & 3714 & On the Convergence of Certified Robust Training with Interva... \\
+15 & 440 & Out-of-Distribution Detection based on In-Distribution Data ... \\
+16 & 714 & Out-of-distribution Detection with Implicit Outlier Transfor... \\
+17 & 3352 & Reducing Excessive Margin to Achieve a Better Accuracy vs. R... \\
+18 & 2281 & Robust Overfitting may be mitigated by properly learned smoo... \\
+19 & 3155 & Sparsity Winning Twice: Better Robust Generalization from Mo... \\
+20 & 3822 & Squeeze Training for Adversarial Robustness \\
+21 & 4949 & StableDR: Stabilized Doubly Robust Learning for Recommendati... \\
+22 & 4937 & TDR-CL: Targeted Doubly Robust Collaborative Learning for De... \\
+23 & 1511 & Towards Stable and Efficient Training of Verifiably Robust N... \\
+\hline
+\end{tabular}
+\caption{Titles for papers in the top 20 similarity list (using indices)}
+\end{table}
