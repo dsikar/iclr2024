@@ -43,21 +43,38 @@ top_20_paperID_pairs, top_20_similarities_scores
 # Extracting unique papers from top pairs for the second table
 unique_papers_from_top_pairs = list(set([paper for pair in top_20_paperID_pairs for paper in pair]))
 
-# Generating LaTeX table for top 20 similar paper pairs
-latex_table_pairs = "\\begin{table}[h!]\n"
-latex_table_pairs += "\\centering\n"
-latex_table_pairs += "\\begin{tabular}{|c|c|c|c|}\n"
-latex_table_pairs += "\\hline\n"
-latex_table_pairs += "Index & Paper 1 (Index in master\\_list) & Paper 2 (Index in master\\_list) & Cosine Similarity Score\\\\\n"
-latex_table_pairs += "\\hline\n"
-for idx, ((paper1, paper2), score) in enumerate(zip(top_20_paperID_pairs, top_20_similarities_scores), 1):
-    paper1_idx = next(i for i, entry in enumerate(papers_list_data) if entry['paperID'] == paper1)
-    paper2_idx = next(i for i, entry in enumerate(papers_list_data) if entry['paperID'] == paper2)
-    latex_table_pairs += f"{idx} & {paper1_idx} & {paper2_idx} & {score:.3f}\\\\\n"
-latex_table_pairs += "\\hline\n"
-latex_table_pairs += "\\end{tabular}\n"
-latex_table_pairs += "\\caption{Top 20 most similar paper pairs based on abstract cosine similarity}\n"
-latex_table_pairs += "\\end{table}\n"
+# Filter out papers that have abstracts and are in papers_list_data
+papers_with_abstracts = [entry for entry in papers_list_data if entry['abstract']]
+
+# Mapping indices from master_list_data to their corresponding indices in papers_with_abstracts
+index_mapping = {entry['paperID']: idx for idx, entry in enumerate(papers_with_abstracts)}
+
+# Filtering pairs where both paperIDs are in papers_with_abstracts
+filtered_unique_pairs = [(paper1, paper2) for paper1, paper2 in unique_top_20_pairs if paper1 in index_mapping and paper2 in index_mapping]
+
+# Sorting the filtered unique pairs by cosine similarity score in descending order
+sorted_filtered_pairs = sorted(filtered_unique_pairs, key=lambda pair: cosine_similarity_matrix[index_mapping[pair[0]], index_mapping[pair[1]]], reverse=True)
+
+# Generating LaTeX table for sorted unique top 20 similar paper pairs
+latex_table_sorted_pairs = "\\begin{table}[h!]\n"
+latex_table_sorted_pairs += "\\centering\n"
+latex_table_sorted_pairs += "\\begin{tabular}{|c|c|c|c|}\n"
+latex_table_sorted_pairs += "\\hline\n"
+latex_table_sorted_pairs += "Index & Paper 1 (Index in master\\_list) & Paper 2 (Index in master\\_list) & Cosine Similarity Score\\\\\n"
+latex_table_sorted_pairs += "\\hline\n"
+
+for idx, (paper1, paper2) in enumerate(sorted_filtered_pairs, 1):
+    paper1_idx_in_master = next(i for i, entry in enumerate(master_list_data) if entry['paperID'] == paper1)
+    paper2_idx_in_master = next(i for i, entry in enumerate(master_list_data) if entry['paperID'] == paper2)
+    score = cosine_similarity_matrix[index_mapping[paper1], index_mapping[paper2]]
+    latex_table_sorted_pairs += f"{idx} & {paper1_idx_in_master} & {paper2_idx_in_master} & {score:.3f}\\\\\n"
+latex_table_sorted_pairs += "\\hline\n"
+latex_table_sorted_pairs += "\\end{tabular}\n"
+latex_table_sorted_pairs += "\\caption{Top most similar unique paper pairs based on abstract cosine similarity (sorted in descending order)}\n"
+latex_table_sorted_pairs += "\\end{table}\n"
+
+latex_table_sorted_pairs
+
 
 # Generating LaTeX table for unique papers in top pairs with correct source for title
 latex_table_papers = "\\begin{table}[h!]\n"
