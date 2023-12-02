@@ -82,13 +82,29 @@ class SemanticScholar:
         # Return the list of paperIds of the references
         return reference_ids
 
-
     def get_paper_details(self, paperID):
         """Retrieve details of a paper including BibTeX, ArXiv ID, and publication year."""
+        import os
+        # Get the directory of the current script
+        script_dir = os.path.dirname(os.path.realpath(__file__))
+
+        # Construct the full path to the API key file
+        api_key_file = os.path.join(script_dir, 'ss_api_key.txt')
+
+        # Read the API key from the file
+        with open(api_key_file, 'r') as file:
+            api_key = file.read().strip()
+
+        # Set the headers with the API key
+        headers = {
+            'x-api-key': api_key
+        }
+
         # Make a POST request to retrieve paper details
         r = requests.post(
             'https://api.semanticscholar.org/graph/v1/paper/batch',
-            params={'fields': 'referenceCount,citationCount,title,citationStyles,openAccessPdf,externalIds,publicationDate,abstract'},
+            headers=headers,
+            params="{'fields': 'referenceCount,citationCount,title,citationStyles,openAccessPdf,externalIds,publicationDate,abstract'}",
             json={"ids": [paperID]}
         )
 
