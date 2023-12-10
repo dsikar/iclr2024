@@ -1,7 +1,7 @@
 import requests
 import os
 import pickle
-
+import time
 
 # Semantic Scholar API documentation: https://api.semanticscholar.org/graph/v1
 # https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/operation/post_graph_get_papers
@@ -100,27 +100,45 @@ class SemanticScholar:
             'x-api-key': api_key
         }
 
+        # s = requests.Session()
+        # s.timeout = 15
         # Make a POST request to retrieve paper details
-        r = requests.post(
-            'https://api.semanticscholar.org/graph/v1/paper/batch',
-            headers=headers,
-            params="{'fields': 'referenceCount,citationCount,title,citationStyles,openAccessPdf,externalIds,publicationDate,abstract'}",
-            json={"ids": [paperID]}
-        )
+        # r = requests.post(
+        #     'https://api.semanticscholar.org/graph/v1/paper/batch',
+        #     params="{'fields': 'referenceCount,citationCount,title,citationStyles,openAccessPdf,externalIds,publicationDate,abstract'}",
+        #     json={"ids": [paperID]}
+        # )
+        # r = requests.post(
+        #     f'https://api.semanticscholar.org/graph/v1/paper/paper/{paperID}?fields=referenceCount,citationCount,title,citationStyles,openAccessPdf,externalIds,publicationDate,abstract'
+        # )        
 
-        output = r.json()
+        #output = r.json()
+
+        url = f'https://api.semanticscholar.org/graph/v1/paper/{paperID}?fields=referenceCount,citationCount,title,citationStyles,openAccessPdf,externalIds,publicationDate,abstract'
+        response = requests.get(url)
+
+        # initialise return variables
+        output = None
+        arxiv_id = None
+        publication_year = None
+        abstract = None
+        bibtex = None
+
+        if response.status_code == 200:
+            output = response.json()
+        else:
+            print("Error: Failed to retrieve data from the API.")        
 
         # Extract the desired fields
-        bibtex = output[0]['citationStyles']['bibtex']
-        if 'externalIds' in output[0] and 'ArXiv' in output[0]['externalIds']:
+        if 'citationStyles' in output and 'bibtex' in output['citationStyles']:
+            bibtex = output['citationStyles']['bibtex']
+        if 'externalIds' in output and 'ArXiv' in output['externalIds']:
             arxiv_id = output[0]['externalIds']['ArXiv']
-        else:
-            arxiv_id = None
-        if 'publicationDate' in output[0] and output[0]['publicationDate'] is not None:
-            publication_year = output[0]['publicationDate'].split('-')[0]  # Extract the year from the date
-        else:
-            publication_year = None
-        abstract = output[0]['abstract']
+        if 'publicationDate' in output:
+            publication_year = output['publicationDate'].split('-')[0]  # Extract the year from the date
+        if 'abstract' in output:
+            abstract = output[0]['abstract']
+            
         return bibtex, arxiv_id, publication_year, abstract
 
 
