@@ -89,16 +89,16 @@ class SemanticScholar:
         script_dir = os.path.dirname(os.path.realpath(__file__))
 
         # Construct the full path to the API key file
-        api_key_file = os.path.join(script_dir, 'ss_api_key.txt')
+        # api_key_file = os.path.join(script_dir, 'ss_api_key.txt')
 
         # Read the API key from the file
-        with open(api_key_file, 'r') as file:
-            api_key = file.read().strip()
+        # with open(api_key_file, 'r') as file:
+            # api_key = file.read().strip()
 
         # Set the headers with the API key
-        headers = {
-            'x-api-key': api_key
-        }
+        # headers = {
+        #     'x-api-key': api_key
+        # }
 
         # s = requests.Session()
         # s.timeout = 15
@@ -133,11 +133,11 @@ class SemanticScholar:
         if 'citationStyles' in output and 'bibtex' in output['citationStyles']:
             bibtex = output['citationStyles']['bibtex']
         if 'externalIds' in output and 'ArXiv' in output['externalIds']:
-            arxiv_id = output[0]['externalIds']['ArXiv']
-        if 'publicationDate' in output:
+            arxiv_id = output['externalIds']['ArXiv']
+        if 'publicationDate' in output and output['publicationDate'] is not None:
             publication_year = output['publicationDate'].split('-')[0]  # Extract the year from the date
         if 'abstract' in output:
-            abstract = output[0]['abstract']
+            abstract = output['abstract']
             
         return bibtex, arxiv_id, publication_year, abstract
 

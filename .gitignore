@@ -1,3 +1,7 @@
 .vscode
 # api key
 scripts/ss_api_key.txt
+# download folders
+iclr_20*
+# bitcode
+scripts/__pycache__
