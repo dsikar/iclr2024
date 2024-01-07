@@ -5,3 +5,8 @@ scripts/ss_api_key.txt
 iclr_20*
 # bitcode
 scripts/__pycache__
+# environment
+.python-version
+# code run artifacts
+saved_data/
+slides/
